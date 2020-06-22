@@ -1,0 +1,82 @@
+<%- include("partials/header") %>
+<body class="home">
+  <div class='container' style="text-align: center; width: 50%;">
+    <% if (error && error.length > 0) { %>
+      <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+    <% if (success && success.length > 0) { %>
+      <div class="alert alert-success" role="alert">
+        <%= success %>
+      </div>
+    <% } %>
+  </div>
+
+    <div class="w3-display-topleft">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-angle-double-down"></i>
+          <div class="sm-menu">
+            <a href="/aboutus"><i class="fas fa-address-book"></i></a>
+            <a href="/explore"><i class="fas fa-book"></i></i></a>
+            
+            
+          </div>
+        </div>
+      </div>
+      <a style="padding-left: 60%;" href="/">
+        <img id="logo" src="/image/logo.png" >
+      </a> 
+    </div>
+  
+      <script>
+        $(".show-btn").click(function(){
+          $(".sm-menu").fadeToggle("fast");
+        });
+      </script>
+  
+     
+    
+      <div class="w3-display-topleft  tte">
+        <p>TRAIN<br>TO<br>ENGLISH</p></div>
+  
+  
+      <div class="des">
+        <p>DON'T SELL YOURSELF SHORT.</p>
+          <p>WE TRUST YOU CAN DO IT. </p>
+        <a href="/explore"> <button class="w3-pink  w3-hover-blue button"><span>EXPLORE OUR LESSON</span></button></a>
+           
+      </div>
+      
+  
+      <div class="w3-display-topright w3-padding butt" >
+        <button class="w3-button w3-pink w3-round-large  show-login-btn w3-hover-blue"style="width:auto;"  >lOGIN</button>
+       <a href="/signup"><br> <button  class="w3-button w3-black w3-round-large   w3-hover-blue"style="width:auto;" >TTE GUEST</button></a>
+      </div>
+  
+      
+  
+      <div class="login-box">
+        <div class="hide-login-btn"><i class="fas fa-times"></i></div>
+        
+      <form class="login-form" action="/" method="POST">
+  
+        <h1>Welcome</h1>
+        <input class="logtxtb" type="text" name="username" placeholder="Username">
+        <input class="logtxtb" type="password" name="password" placeholder="Password">
+        <input class="login-btn" type="submit" name="" value="Login">
+      </form>
+      </div>
+  
+  
+      <script type="text/javascript">
+      $(".show-login-btn").on("click",function(){
+        $(".login-box").toggleClass("showed");
+      });
+      $(".hide-login-btn").on("click",function(){
+        $(".login-box").toggleClass("showed");
+      });
+      </script>
+
+<%- include("partials/footer") %>

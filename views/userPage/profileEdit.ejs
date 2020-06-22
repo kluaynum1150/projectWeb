@@ -1,0 +1,105 @@
+<%- include("../partials/header") %>
+<body class="editpro">
+
+    <div class="w3-display-topleft">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-angle-double-down"></i>
+          <div class="sm-menu">
+            <a href="/TTE/profile"><i class="fas fa-user-edit"></i></a>
+            <a href="/TTE"><i class="fas fa-map-marked-alt"></i></a>
+            <a href="/aboutus"><i class="fas fa-address-book"></i></a>
+            <a href="/explore"><i class="fas fa-book"></i></i></a>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      <a style="padding-left: 60%;" href="/">
+        <img id="logo" src="/image/logo.png" >
+      </a> 
+    </div>
+  
+      <script>
+        $(".show-btn").click(function(){
+          $(".sm-menu").fadeToggle("fast");
+        });
+      </script>
+
+
+
+<form class="box" action="/TTE/profile/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+  <h1>Profile</h1>
+  <img class="pic" src='<%= "/uploads/" + infoUser.imgProfile %>'>
+  <h4>EDIT IMAGE</h4>
+  <input type="file" class="form-control" name="imgProfile" accept="image/*">
+  <h4>FIRSTNAME</h4>
+  <input type="text" name="firstName" value="<%= infoUser.firstname %>">
+  <h4>LASTNAME</h4>
+  <input type="text" name="lastName" value="<%= infoUser.lastname %>">
+  <button style="width: 20%; display: inline;" type="submit" class="btn btn-outline-success">SUBMIT</button>
+  <a style="display: inline;" href="/TTE/profile" class="btn btn-outline-danger">CANCEL</a>
+</form>
+<button  onclick="document.getElementById('id01').style.display='block'" class="editbut2".>Change password</button>
+
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/TTE/profile/edit/reset-password" method="POST">
+    
+    <div class="container">
+      <label for="oldpassword"><b>OLD PASSWORD</b></label>
+      <input type="password" placeholder="Enter Old Password" name="oldpassword" required>
+      
+      <label for="newpassword"><b>NEW PASSWORD</b></label>
+      <input type="password" id="p" placeholder="Enter New Password" name="newpassword" required>
+
+      <label for="CNpassword"><b>CONFIRM NEW PASSWORD</b></label>
+      <input type="password" id="Cp" placeholder="Confirm New Password" name="CNpassword" required>
+      <div class='container' style="text-align: center;" id="divCheckPasswordMatch">
+                    
+      </div>
+        
+      <button type="submit" id="b" style="width: 20%;">Submit</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<%- include("../partials/footer") %>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Cp").keyup(function(){
+          var password = $("#p").val();
+          var confirmPassword = $("#Cp").val();
+          if (password != confirmPassword){
+            $("#b").attr("disabled",true);
+            $("#divCheckPasswordMatch").html('<div class="alert alert-danger" role="alert">Passwords do not match!</div>');
+          } else {
+            $("#b").attr("disabled",false);
+            $("#divCheckPasswordMatch").html('<div class="alert alert-success" role="alert">Passwords match.</div>');
+          }
+        });
+    });
+  </script>

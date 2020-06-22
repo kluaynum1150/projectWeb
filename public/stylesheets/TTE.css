@@ -1,0 +1,1683 @@
+
+/*.....................................................map1 zone..............................................................*/
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+/*
+  VARIABLES
+*/
+/*
+  ANIMATIONS
+*/
+@-webkit-keyframes trolley-path-move {
+  to {
+    stroke-dashoffset: 100%;
+  }
+}
+@keyframes trolley-path-move {
+  to {
+    stroke-dashoffset: 100%;
+  }
+}
+
+
+body.map1 {
+  background: rgb(119, 180, 209);
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1.title1 {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1rem;
+  color: rgb(5, 69, 105);
+}
+
+h1.title1 a {
+  color: #c92283;
+  text-decoration: none;
+}
+
+h1.title1 a:hover {
+  color: #3274aa;
+}
+
+@media screen and (min-width: 640px) {
+  h1.title1 {
+    font-size: 4rem;
+    letter-spacing: .2rem;
+  }
+}
+
+/*
+  SVG STYLING
+*/
+svg#map-w-legend {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+svg#map-w-legend text {
+  text-rendering: geometricPrecision;
+  font-size: .35rem;
+  font-weight: 400;
+}
+
+svg#map-w-legend text.text-label {
+  font-family: Oswald, sans-serif !important;
+  fill: #fff !important;
+  letter-spacing: .02rem;
+}
+
+svg#map-w-legend .fills .fill-street-fest {
+  fill: #f8a514;
+}
+
+svg#map-w-legend .fills .fill-club-hb {
+  fill: #13aa40;
+}
+
+svg#map-w-legend .streets .pedestrian-mall {
+  fill: #13a3aa;
+}
+
+svg#map-w-legend .streets .street-paths {
+  fill: #fff;
+}
+
+svg#map-w-legend .labels {
+  fill: #fff;
+}
+
+svg#map-w-legend .labels text {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .025rem;
+  font-size: .4rem;
+}
+
+svg#map-w-legend .labels text.s2 {
+  font-size: .4rem;
+}
+
+svg#map-w-legend .labels text.s3 {
+  font-size: .35rem;
+}
+
+svg#map-w-legend .hb-ball .hisam-block {
+  fill: #111;
+}
+
+svg#map-w-legend .hb-ball use {
+  fill: #fff;
+}
+
+svg#map-w-legend .stages .stage-block {
+  fill: rgb(253, 7, 52);
+}
+
+svg#map-w-legend .stages [data-label] {
+  fill: #fff;
+}
+
+
+svg#map-w-legend .trolley .trolley-path {
+  fill: transparent;
+  stroke: #AA0E76;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  -webkit-animation: trolley-path-move 30s linear infinite;
+          animation: trolley-path-move 30s linear infinite;
+  stroke-dasharray: 5;
+}
+
+svg#map-w-legend .bolts text, svg#map-w-legend .squares text {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+svg#map-w-legend .square use {
+  fill: rgb(253, 7, 52);
+}
+
+svg#map-w-legend .square text {
+  fill: #fff;
+}
+
+/*lesson*/
+a.l1{
+  position: absolute;
+  z-index: 0;
+  left: 720px;
+  top:610px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+a.l2{
+  position: absolute;
+  z-index: 0;
+  left: 580px;
+  top:455px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+a.l3{
+  position: absolute;
+  z-index: 0;
+  left: 700px;
+  top:170px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+
+
+/*RESPONSIVE map1*/
+@media only screen and (max-width: 1366px){
+  a.l1{
+    left:590px;
+    top:600px;
+  }
+  a.l2{
+    left:470px;
+    
+  }
+  a.l3{
+    left:590px;
+    top:175px;
+  }
+  }
+
+@media only screen and (max-width: 1024px){
+a.l1{
+  left:450px;
+  top:600px;
+}
+a.l2{
+  left:300px;
+  
+}
+a.l3{
+  left:470px;
+  top:170px;
+}
+}
+@media only screen and (max-width: 812px){
+  a.l1{
+    left:350px;
+    top:px;
+  }
+  a.l2{
+    left: 200px;
+    top:460px;
+  }
+  a.l3{
+    left: 300px;
+    top:180px;
+  }
+  }
+
+@media only screen and (max-width: 768px){
+  a.l1{
+    left: 300px;
+    top:580px;
+  }
+  a.l2{
+    left: 180px;
+    top:440px;
+  }
+  a.l3{
+    left: 300px;
+    top:180px;
+  }
+  }
+  @media only screen and (max-width: 667px){
+    a.l1{
+      left:270px;
+      top:650px;
+    }
+    a.l2{
+      left: 150px;
+      top:530px;
+    }
+    a.l3{
+      left: 300px;
+      top:300px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title1{
+      margin-top: 100px;
+    }
+    }
+    @media only screen and (max-width: 568px){
+      a.l1{
+        left: 240px;
+        top:550px;
+      }
+      a.l2{
+        left: 130px;
+        top:450px;
+      }
+      a.l3{
+        left: 250px;
+        top:250px;
+      }
+      }
+   
+  
+
+  @media only screen and (max-width: 414px){
+    a.l1{
+      left: 160px;
+      top:460px;
+      width: 15px;
+      height:15px;
+      font-size: 5px;
+    }
+    a.l2{
+      left: 100px;
+      top:380px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    a.l3{
+      left: 170px;
+      top:240px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title1{
+      margin-top: 100px;
+    }
+    }
+
+  @media only screen and (max-width: 375px){
+    a.l1{
+      left: 150px;
+      top:440px;
+      width: 15px;
+      height:15px;
+      font-size: 5px;
+    }
+    a.l2{
+      left:90px;
+      top:370px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    a.l3{
+      left: 145px;
+      top:240px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title1{
+      margin-top: 100px;
+    }
+    }
+    @media only screen and (max-width: 320px){
+      a.l1{
+        left: 40px;
+        top:390px;
+        width: 15px;
+        height:15px;
+        
+      }
+      a.l2{
+        left: 70px;
+        top:340px;
+        width: 15px;
+        height: 15px;
+        
+      }
+      a.l3{
+        left: 130px;
+        top:225px;
+        width: 15px;
+        height: 15px;
+        
+      }
+      svg#map-w-legend{
+        margin-top: 50px;
+        
+      }
+      h1.title1{
+        margin-top: 100px;
+      }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+  /*.......................................................................map2 zone.................................................................................*/
+  body.map2 {
+    background: rgb(220, 157, 223);
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  
+  h1.title2 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1rem;
+    color: rgb(5, 69, 105);
+  }
+  
+  h1.title2 a {
+    color: #37a129;
+    text-decoration: none;
+  }
+  
+  h1.title2 a:hover {
+    color: #cf7018;
+  }
+  
+   @media screen and (min-width: 640px) {
+    h1.title2 {
+      font-size: 4rem;
+      letter-spacing: .2rem;
+    }
+  } 
+  /*lesson*/
+a.lm1{
+  position: absolute;
+  z-index: 0;
+  left: 500px;
+  top:575px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+a.lm2{
+  position: absolute;
+  z-index: 0;
+  left: 700px;
+  top:455px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+a.lm3{
+  position: absolute;
+  z-index: 0;
+  left: 910px;
+  top:330px;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(253, 7, 52);
+  color: #fff;
+  text-align: center;
+}
+/*RESPONSIVE map2*/
+@media only screen and (max-width: 1366px){
+  a.lm1{
+    left: 385px;
+    top:580px;
+  }
+  a.lm2{
+    left: 600px;
+    top:460px;
+  }
+  a.lm3{
+    left: 810px;
+    top:330px;
+  }
+  }
+
+@media only screen and (max-width: 1024px){
+a.lm1{
+  left: 220px;
+  top:580px;
+}
+a.lm2{
+  left: 410px;
+  top:460px;
+}
+a.lm3{
+  left: 630px;
+  top:330px;
+}
+}
+@media only screen and (max-width: 812px){
+  a.lm1{
+    left: 100px;
+    top:580px;
+  }
+  a.lm2{
+    left: 300px;
+    top:460px;
+  }
+  a.lm3{
+    left: 520px;
+    top:330px;
+  }
+  }
+
+@media only screen and (max-width: 768px){
+  a.lm1{
+    left: 100px;
+    top:555px;
+  }
+  a.lm2{
+    left: 300px;
+    top:440px;
+  }
+  a.lm3{
+    left: 500px;
+    top:320px;
+  }
+  }
+  @media only screen and (max-width: 667px){
+    a.lm1{
+      left: 70px;
+      top:630px;
+    }
+    a.lm2{
+      left: 250px;
+      top:530px;
+    }
+    a.lm3{
+      left: 430px;
+      top:410px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title2{
+      margin-top: 100px;
+    }
+    }
+    @media only screen and (max-width: 568px){
+      a.lm1{
+        left: 70px;
+        top:535px;
+      }
+      a.lm2{
+        left: 230px;
+        top:450px;
+      }
+      a.lm3{
+        left: 350px;
+        top:350px;
+      }
+      }
+   
+  
+
+  @media only screen and (max-width: 414px){
+    a.lm1{
+      left: 50px;
+      top:440px;
+      width: 15px;
+      height:15px;
+      font-size: 5px;
+    }
+    a.lm2{
+      left: 150px;
+      top:380px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    a.lm3{
+      left: 275px;
+      top:320px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title2{
+      margin-top: 100px;
+    }
+    }
+
+  @media only screen and (max-width: 375px){
+    a.lm1{
+      left: 50px;
+      top:420px;
+      width: 15px;
+      height:15px;
+      font-size: 5px;
+    }
+    a.lm2{
+      left: 150px;
+      top:370px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    a.lm3{
+      left: 245px;
+      top:300px;
+      width: 15px;
+      height: 15px;
+      font-size: 5px;
+    }
+    svg#map-w-legend{
+      margin-top: 50px;
+      
+    }
+    h1.title2{
+      margin-top: 100px;
+    }
+    }
+    @media only screen and (max-width: 320px){
+      a.lm1{
+        left: 40px;
+        top:390px;
+        width: 15px;
+        height:15px;
+        
+      }
+      a.lm2{
+        left: 120px;
+        top:340px;
+        width: 15px;
+        height: 15px;
+        
+      }
+      a.lm3{
+        left: 210px;
+        top:285px;
+        width: 15px;
+        height: 15px;
+        
+      }
+      svg#map-w-legend{
+        margin-top: 50px;
+        
+      }
+      h1.title2{
+        margin-top: 100px;
+      }
+      }
+
+
+
+
+
+
+
+
+/*...............................................................................................menuhome................................................................*/
+.middle{
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sm-container{
+  text-align: center;
+}
+
+.sm-container i{
+  color: #f5f6fa;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.sm-container i:hover{
+  transform: scale(1.2);
+}
+
+.sm-menu{
+  background: #487eb0;
+  position: absolute;
+  border-radius: 8px;
+  display: none;
+}
+
+.sm-menu::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #487eb0;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+#logo{
+  width:110px ;
+  height:110px;
+ 
+ }
+
+
+
+
+
+/*................................................................................admin zone...........................................................................*/
+body.admin{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/image/admin.jfif);
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+   
+}
+.adcontainer{
+  perspective: 350px;
+}
+
+.adtitle{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: aliceblue;
+ font-size: 60px;
+ 
+
+}
+
+.adbtn{
+  display: block;
+  margin: 40px 0;
+  width: 240px;
+  height: 80px;
+  border: none;
+  background-color: #38a3ce;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+
+.adbtn1:hover{
+  transform: rotateY(15deg);
+  box-shadow: -15px 0px 15px #4194e190;
+}
+
+.adbtn2:hover{
+  transform: rotateY(-15deg);
+  box-shadow: 15px 0 15px #4194e190;
+}
+/*RESPONSIVE admin*/
+
+@media only screen and (max-width:823px){
+  .adtitle{
+    font-size: 30px;
+   
+   }
+   .adbtn{
+    width: 200px;
+    height: 60px;
+    
+  }
+ 
+  }
+
+@media only screen and (max-width:812px){
+  .adtitle{
+    font-size: 45px;
+   
+   }
+   .adbtn{
+    width: 200px;
+    height: 60px;
+    
+  }
+ 
+  }
+  @media only screen and (max-width:640px){
+    .adtitle{
+      font-size: 40px;
+     
+     }
+     .adbtn{
+      width: 200px;
+      height: 60px;
+      
+    }
+   
+    }
+    @media only screen and (max-width: 568px){
+      .adtitle{
+        font-size: 35px;
+        
+      }
+      .adbtn{
+      
+       width: 200px;
+       height: 50px;
+       
+     }
+     
+      }
+  @media only screen and (max-width: 414px){
+    .adtitle{
+      font-size: 30px;
+      padding-top: 100px;
+     }
+   
+    }
+
+@media only screen and (max-width: 375px){
+  .adtitle{
+    font-size: 30px;
+    padding-top: 100px;
+   }
+ 
+  }
+
+  @media only screen and (max-width:360px){
+    .adtitle{
+      font-size: 25px;
+     
+    }
+  }
+
+  
+  @media only screen and (max-width: 320px){
+    .adtitle{
+      font-size: 20px;
+      padding-top: 100px;
+     }
+   
+    }
+
+
+
+    
+    /*....................................................................study zone...............................................................................*/
+    body.study{
+      background-image: url(/image/study1.jpg);
+      
+    }
+
+
+
+
+
+
+
+    /*...............................................................explore lesson zone........................................................................... */
+    body.ex{
+      min-height: 100vh;
+      background-image: linear-gradient(125deg,#abd3fa,#ffc3f7);
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans",sans-serif;
+      text-decoration: none;
+      list-style: none;
+    }
+    
+    .excontainer{
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 200px;
+    }
+    
+    .learning-table{
+      background: #f1f1f1;
+      flex: 1;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+    
+    .learning-header{
+      color: #fff;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .learn{
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    
+    .learn span{
+      font-size: 30px;
+    }
+    
+    .extitle{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%,50%);
+      width: 80%;
+      max-width: 360px;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    
+    .learning-list{
+      padding: 10px 20px;
+    }
+    
+    .learning-list li{
+      margin: 8px 0;
+      font-size: 14px;
+      color: #344;
+      text-align: center;
+    }
+    
+    .exborder{
+      width: 80px;
+      height: 1px;
+      background: #ddd;
+      margin: auto;
+    }
+    
+    .learning-table a{
+      display: block;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
+      border: 1px solid;
+      max-width: 360px;
+      transition: .2s linear;
+    }
+    .learning-table a:hover{
+      border-radius: 30px;
+    }
+    .extable1 .learning-header{
+      background: #f3adef;
+    }
+    .extable2 .learning-header{
+      background: #f1eaa8;
+    }
+    
+    
+    .extable1 .extitle{
+      background-image: linear-gradient(125deg,#e7ade9,#cc68f3);
+    }
+    .extable2 .extitle{
+      background-image: linear-gradient(125deg,#f19346,#f1dea7);
+    }
+    
+    
+    .extable1 a{
+      color: #6029b9;
+    }
+    .extable2 a{
+      color: #f55409;
+    }
+    
+    
+    .extable1 a:hover{
+      background: #6029b9;
+      color: #fff;
+    }
+    .extable2 a:hover{
+      background:#f55409;
+      color: #fff;
+    }
+    
+    
+    @media screen and (max-width:780px) {
+      .learning-table{
+        flex: 100%;
+      }
+    }
+
+
+
+
+
+
+
+    /*.....................................................................................register zone......................................................................*/
+    body.register {
+      background-image: url('/image/register.jfif');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+    .signup-form{
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      background: url(/image/bg.png);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      overflow: hidden;
+    }
+    .signup-form h1{
+      margin-top: 100px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #fff;
+      font-size: 40px;
+    }
+    .signup-form input{
+      display: block;
+      width: 100%;
+      padding: 0 16px;
+      height: 44px;
+      text-align: center;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      font-family: "montserrat",sans-serif;
+    }
+    .retxtb{
+      margin: 20px 0;
+      background: rgba(255,255,255,.5);
+      border-radius: 6px;
+    }
+    .signup-btn{
+      margin-top: 60px;
+      margin-bottom: 20px;
+      background: #487eb0;
+      color: #fff;
+      border-radius: 44px;
+      cursor: pointer;
+      transition: 0.8s;
+    }
+    .signup-btn:hover{
+      transform: scale(0.96);
+    }
+    .signup-form a{
+      text-decoration: none;
+      color: #fff;
+      font-family: "montserrat",sans-serif;
+      font-size: 14px;
+      padding: 10px;
+      transition: 0.8s;
+      display: block;
+    }
+    .signup-form a:hover{
+      background: rgba(0,0,0,.3);
+    }
+  
+    /*responsive register*/
+    @media only screen and (max-width: 375px){
+      .signup-form{
+        
+        top: 90%;
+       
+      
+      }
+    }
+    @media only screen and (max-width: 360px){
+      .signup-form{
+        
+        top: 100%;
+       
+      
+      }
+    }
+
+      @media only screen and (max-width: 320px){
+        .signup-form{
+          
+          top: 110%;
+         
+        
+        }
+      }
+
+
+
+      /*..............................................................................editpro zone........................................................................*/
+      body.editpro{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url(/image/editpro.png);
+        
+      }
+      
+      .box{
+        width: 500px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+        z-index: -1px;
+      }
+      
+      .box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .box input[type = "text"],.box input[type = "password"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+      .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+        width: 280px;
+        border-color: #cc2e97;
+      }
+      .box input[type = "button"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #652ecc;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        margin-top: 70px;
+        
+      }
+      .box input[type = "button"]:hover{
+        background: #652ecc;
+      }
+      button.editbut{
+        margin: 20px auto;
+        background: none;
+        display: block;
+        border: 2px solid #da9123;
+       color: white;
+       border-radius: 24px;
+       transition: 0.25s;
+       
+       padding: 14px 40px;
+      }
+      
+      button.editbut2{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #f046e7;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        z-index: 0px;
+        position: absolute;
+        width: 20%;
+        top: 530px;
+        left: 650px;
+        margin-top: 20px;
+      }
+      button.editbut:hover{
+        border: 2px solid #da9123;
+        background-color: #da9123;
+      }
+      button.editbut2:hover{
+        border: 2px solid #f046e7;
+        background-color: #f046e7;
+        
+      }
+      
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      
+      img.pic:hover{
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+
+ /* popup password*/
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  
+}
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #1e4bdd;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* responsive editpro*/
+@media screen and (max-width: 1366px) {
+  
+  button.editbut2{
+    
+    top: 660px;
+    left: 550px;
+    
+  }
+}
+@media screen and (max-width: 1024px) {
+  button.editbut2{
+    
+    top: 835px;
+    left: 410px;
+    
+  }
+ 
+}
+@media screen and (max-width: 812px) {
+  button.editbut2{
+    
+    top: 645px;
+    left: 270px;
+   padding: 15px 0px;
+   width: 35%;
+  }
+  .box{
+    top: 500px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  button.editbut2{
+    
+    top: 645px;
+    left: 250px;
+   
+  }
+  
+}
+@media screen and (max-width: 375px) {
+  button.editbut2{
+    
+    top: 645px;
+    left: 80px;
+   width: 60%;
+  }
+  .box{
+    top: 500px;
+    width: 400px;
+    background:none;
+  }
+  
+}
+
+@media screen and (max-width: 414px) {
+  button.editbut2{
+    
+    top: 645px;
+    left: 80px;
+   width: 60%;
+  }
+  .box{
+    top: 500px;
+    width: 400px;
+    background:none;
+  }
+  
+}
+
+
+
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+      /*........................................................................................... home zone........................................................*/
+      body.home {
+        background-image: url(/image/home.jfif);
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100% 100%;
+      }
+      .w3-btn {width:150px;}
+    
+      .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      .tte{
+        font-size: 80px; 
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        color: white; 
+        padding-left: 80px;
+        padding-top: 50px;
+      }
+      .des{
+        color: white;
+         font-family: monospace;
+        padding-left: 100px;
+         padding-top: 500px;
+      }
+      .butt{
+        font-size: small;
+        padding-top: 50px;
+        padding-left: 20px;
+      }
+
+      
+
+
+
+
+
+      /*........................................................................................login zone.................................................................*/
+      .login-box{
+        position: absolute;
+        top: 0;
+        left: -105%;
+        width: 100%;
+        height: 100vh;
+        background-image: url(/image/login.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: 1s;
+      }
+      .login-form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+        text-align: center;
+      }
+      .login-form h1{
+        font-weight: 400;
+        margin-top: 0;
+      }
+      .logtxtb{
+        display: block;
+        box-sizing: border-box;
+        width: 240px;
+        background: #ffffff28;
+        border: 1px solid white;
+        padding: 10px 20px;
+        color: white;
+        outline: none;
+        margin: 10px 0;
+        border-radius: 6px;
+        text-align: center;
+      }
+      .login-btn{
+        width: 240px;
+        background: #2c3e50;
+        border: 0;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .hide-login-btn{
+        color: #000;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        font-size: 24px;
+        opacity: .7;
+      }
+      .show-login-btn{
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        transform: translate(-50%,-50%);
+        cursor: pointer;
+      }
+      .showed{
+        left: 0;
+      }
+
+
+
+
+
+      /*.........................................................................................about us zone.........................................................*/
+      body.aboutus{
+        background: url(/image/bg.jpg) no-repeat center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Open Sans",sans-serif;
+        padding-top: 80px;
+       
+      }
+      
+      .profile-card{
+      
+        width: 430px;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 0 10px #00000070;
+      }
+      
+      .top-section{
+        padding: 60px 40px;
+        background: #2c2c54aa;
+      }
+      
+      .message,.notif{
+        position: absolute;
+        top: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #ffffff50;
+      }
+      
+    
+      
+      .pic{
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 2px solid #2c3e50;
+        border-radius: 50%;
+        padding: 8px;
+        position: relative;
+      }
+      
+      .pic:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: 1px solid #2c3e50;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        animation: wave 1.5s infinite linear;
+      }
+      
+      @keyframes wave {
+        to{
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+      
+      .pic img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      
+      .name{
+        color: #f1f1f1;
+        font-size: 28px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      
+      .tag{
+        font-size: 18px;
+        color: #222;
+      }
+      
+      .bottom-section{
+        background: #f1f1f1;
+        padding: 60px 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        text-transform: uppercase;
+      }
+      
+      .border{
+        width: 1px;
+        height: 20px;
+        background: #bbb;
+        margin: 0 30px;
+      }
+      
+      .bottom-section span{
+        font-size: 14px;
+        display: block;
+      }
+      
+      .social-media{
+        position: absolute;
+        width: 100%;
+        top: -30px;
+        left: 0;
+        z-index: 1;
+      }
+      
+      .social-media i{
+        width: 60px;
+        height: 60px;
+        background: #2c3e50;
+        border-radius: 50%;
+        color: #f1f1f1;
+        font-size: 20px;
+        line-height: 60px !important;
+        margin: 0 10px;
+        position: relative;
+      }
+      
+      .social-media i:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #2c3e50;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        z-index: -1;
+        transition: 0.4s linear;
+      }
+      
+      .social-media i:hover:after{
+        transform: scale(1.4);
+        opacity: 0;
+      }
+
+
+
+
+
+   
+      
+
+      
+
+
+
+
+

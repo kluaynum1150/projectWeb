@@ -8,13 +8,12 @@ const express = require("express"),
       methodOverride = require("method-override"),
       user = require('./models/user'),
       indexRoutes = require('./routes/index'),
-      tteRoutes = require("./routes/userPage"),
-      adminRoutes = require("./routes/adminPage");
+      tteRoutes = require('./routes/userPage');
 
 const app = express();
 
 mongoose.set("useUnifiedTopology",true);
-mongoose.connect('mongodb://localhost:27017/tteDatabase', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/tteDatabase2', {useNewUrlParser: true});
 mongoose.set("useCreateIndex",true);
 mongoose.set("useFindAndModify",false);
 app.set("view engine","ejs");
@@ -51,7 +50,7 @@ passport.deserializeUser(user.deserializeUser());
 
 app.use("/",indexRoutes);
 app.use("/TTE",tteRoutes);
-app.use("/admin",adminRoutes);
+// app.use("/admin",adminRoutes);
 
 app.listen(3000,function(){
     console.log('Server is started');
