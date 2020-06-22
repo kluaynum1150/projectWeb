@@ -8,7 +8,8 @@ const express = require("express"),
       methodOverride = require("method-override"),
       user = require('./models/user'),
       indexRoutes = require('./routes/index'),
-      tteRoutes = require('./routes/userPage');
+      tteRoutes = require('./routes/userPage'),
+      adminRoutes = require('./routes/adminPage');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(require("express-session")({
 })
 );
 
+//เพิ่มรหัสของ admin
 // user.register(new user({username: "admin", firstname: "admin", lastname: "admin", tag: "admin"}), "admin", function(err, user){
 //     if(err){
 //         console.log(err);
@@ -50,7 +52,7 @@ passport.deserializeUser(user.deserializeUser());
 
 app.use("/",indexRoutes);
 app.use("/TTE",tteRoutes);
-// app.use("/admin",adminRoutes);
+app.use("/admin",adminRoutes);
 
 app.listen(3000,function(){
     console.log('Server is started');
