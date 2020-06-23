@@ -32,9 +32,9 @@ app.use(require("express-session")({
 
 //เพิ่มรหัสของ admin
 // user.register(new user({username: "admin", firstname: "admin", lastname: "admin", tag: "admin"}), "admin", function(err, user){
-//     if(err){
+ //    if(err){
 //         console.log(err);
-//     }
+ //    }
 // });
 
 app.use(passport.initialize());
