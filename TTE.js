@@ -10,6 +10,7 @@ const express = require("express"),
       levels = require('./models/level'),
       indexRoutes = require('./routes/index'),
       tteRoutes = require('./routes/userPage'),
+      tteProflieRoutes = require('./routes/userPofile'),
       adminRoutes = require('./routes/adminPage');
 
 const app = express();
@@ -69,6 +70,7 @@ passport.deserializeUser(user.deserializeUser());
 
 app.use("/",indexRoutes);
 app.use("/TTE",tteRoutes);
+app.use("/TTE/profile",tteProflieRoutes);
 app.use("/admin",adminRoutes);
 
 app.listen(3000,function(){
