@@ -1,0 +1,62 @@
+<%- include("../partials/header") %>
+<body class="admin">
+    <div class="w3-display-topleft">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-angle-double-down"></i>
+          <div class="sm-menu">
+            <a href="/admin"><i class="fas fa-map-marked-alt"></i></a>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      <a style="padding-left: 60%;" href="/admin">
+        <img id="logo" src="/image/logo.png"  width="100" height="100">
+      </a> 
+    </div>
+  
+      <script>
+        $(".show-btn").click(function(){
+          $(".sm-menu").fadeToggle("fast");
+        });
+      </script>
+    
+    <div class="w3-display-topmiddle adtitle" >Add new quesions</div>
+    <hr>
+    <div class='container'>
+        <form style="width: 50%;" action="/admin/addNewQuesion/<%= Lesson_id%>" method="POST">
+            <div class="form-group">
+                <label style="display: inline;" for="Quesion">Quesion</label>
+                <textarea style="width: 50%;" class="form-control" name="Quesion" rows="1" cols="100" required></textarea>
+                <input class="form-control" type="text" name="maxValue" hidden value="<%= maxValue%>">
+            </div>
+            <div class="form-grop">
+                <label style="display: inline;" for="c1">choice 1</label>
+                <input style="display: inline;" class="form-control" type="text" name="c1" required>
+                <input style="display: inline;" class="form-control" type="radio" name="a" value="a1">
+            </div>
+            <div class="form-grop">
+                <label style="display: inline;" for="c2">choice 2</label>
+                <input style="display: inline;" class="form-control" type="text" name="c2" required>
+                <input style="display: inline;" class="form-control" type="radio" name="a" value="a2">
+            </div>
+            <div class="form-grop">
+                <label style="display: inline;" for="c3">choice 3</label>
+                <input style="display: inline;" class="form-control" type="text" name="c3" required>
+                <input style="display: inline;" class="form-control" type="radio" name="a" value="a3">
+            </div>
+            <div class="form-grop">
+                <label style="display: inline;" for="c4">choice 4</label>
+                <input style="display: inline;" class="form-control" type="text" name="c4" required>
+                <input style="display: inline;" class="form-control" type="radio" name="a" value="a4">
+            </div>
+            <div align="center">
+                <button style="background: #a48ed2;border-color: white; display: inline;" type="submit" class="btn btn-warning">ADD</button>
+                <a href="/admin/addNewQuesion" class="btn btn-primary" style="display: inline; background: #a48ed2;border-color: white;">CANCEL</a>
+            </div>
+        </form>
+        <hr>
+    </div>
+
+<%- include("../partials/footer") %>

@@ -41,7 +41,7 @@ router.get("/signup", function(req, res){
 
 router.post('/signup', function(req,res){
     if(req.body.password == req.body.Cpassword){
-        user.register(new user({username: req.body.username, firstname: req.body.firstName, lastname: req.body.lastName, tag: "user", map: "1", imgProfile: "usericon-001.png", status: "egg"}), req.body.password, function(err, user){
+        user.register(new user({username: req.body.username, firstname: req.body.firstName, lastname: req.body.lastName, tag: "user", map: "1", imgProfile: "usericon-001.png", status: "beginner1"}), req.body.password, function(err, user){
         if(err){
             console.log(err);
             req.flash('error','This username is already taken.');

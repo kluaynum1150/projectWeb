@@ -7,6 +7,7 @@ const express = require("express"),
       passportLocalMongoose = require('passport-local-mongoose'),
       methodOverride = require("method-override"),
       user = require('./models/user'),
+      levels = require('./models/level'),
       indexRoutes = require('./routes/index'),
       tteRoutes = require('./routes/userPage'),
       adminRoutes = require('./routes/adminPage');
@@ -35,6 +36,22 @@ app.use(require("express-session")({
  //    if(err){
 //         console.log(err);
  //    }
+// });
+//เพิ่มเลเวล
+// levels.create({nameLevel: "beginner1"}, function(err){
+//     if(err){
+//         console.log(err);
+//     }
+// });
+// levels.create({nameLevel: "beginner2"}, function(err){
+//     if(err){
+//         console.log(err);
+//     }
+// });
+// levels.create({nameLevel: "beginner3"}, function(err){
+//     if(err){
+//         console.log(err);
+//     }
 // });
 
 app.use(passport.initialize());
