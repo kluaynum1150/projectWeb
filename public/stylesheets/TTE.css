@@ -804,6 +804,9 @@ body.admin{
   #addlesson{
     margin-top:50%;
   }
+  #choose1{
+    margin-top: 50%;
+  }
   
  
  
@@ -828,7 +831,7 @@ body.admin{
     margin-top: 10%;
   }
   #choose1{
-    margin-top: 40%;
+    margin-top: 50%;
   }
   
   
@@ -848,7 +851,9 @@ body.admin{
       margin-top: 0%;
     }
    
-   
+    #choose1{
+      margin-top: 70%;
+    }
    
     }
   @media only screen and (max-width:640px){
@@ -867,6 +872,9 @@ body.admin{
     }
     #adminlogin{
       margin-top: 20%;
+    }
+    #choose1{
+      margin-top: 80%;
     }
     
    
@@ -890,6 +898,9 @@ body.admin{
     #adminlogin{
       margin-top: 30%;
     }
+    #choose1{
+      margin-top: 100%;
+    }
     
    
      
@@ -907,6 +918,9 @@ body.admin{
     }
     #addlesson{
       margin-top: 120%;
+    }
+    #choose1{
+      margin-top: 80%;
     }
    
     
@@ -945,6 +959,9 @@ body.admin{
       font-size: 25px;
      
     }
+    #choose1{
+      margin-top: 100%;
+    }
     
     
   }
@@ -958,7 +975,9 @@ body.admin{
      #addlesson{
       margin-top: 200%;
     }
-   
+    #choose1{
+      margin-top: 150%;
+    }
     
    
     }
