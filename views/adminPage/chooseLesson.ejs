@@ -25,7 +25,7 @@
 <div class="w3-display-topmiddle adtitle" >EDIT AND DELETE LESSON</div>
 
 <div class="adcontainer">
-    <div class='container' style="text-align: center; width: 100%;">
+    <div id="choose1" class="container" style="text-align: center; width: 100%; ">
         <% if (error && error.length > 0) { %>
           <div class="alert alert-danger" role="alert">
             <%= error %>
@@ -37,13 +37,13 @@
           </div>
         <% } %>
     </div>
-    <div class="jumbotron">
+    <div id="choose2" class="jumbotron">
     <% allLesson.forEach(function(allLesson){ %>
-        <div class="container" style="width: 100%;">
+        <div  class="container" style="width: 200%;">
             <h4 style="display: inline;"><%= allLesson.level %> : <%= allLesson.name %></h4>
             <a style="display: inline;" class="btn btn-warning" href="/admin/editLesson/<%= allLesson._id %>">Edit</a>
             <form style="display: inline;" action="/admin/deleteLesson/<%= allLesson._id %>?_method=DELETE" method="POST">
-                <button style="width: 30%;" class="btn btn-danger">Delete</button>
+                <button style="width: 10%;" class="btn btn-danger">Delete</button>
             </form>
         </div>
     <% });%>

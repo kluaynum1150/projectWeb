@@ -151,7 +151,7 @@ a.l1{
   position: absolute;
   z-index: 0;
   left: 720px;
-  top:610px;
+  top:575px;
   width: 30px;
   height: 30px;
   background-color:rgb(253, 7, 52);
@@ -162,7 +162,7 @@ a.l2{
   position: absolute;
   z-index: 0;
   left: 580px;
-  top:455px;
+  top:430px;
   width: 30px;
   height: 30px;
   background-color:rgb(253, 7, 52);
@@ -173,7 +173,7 @@ a.l3{
   position: absolute;
   z-index: 0;
   left: 700px;
-  top:170px;
+  top:140px;
   width: 30px;
   height: 30px;
   background-color:rgb(253, 7, 52);
@@ -186,7 +186,7 @@ a.l3{
 @media only screen and (max-width: 1366px){
   a.l1{
     left:590px;
-    top:600px;
+    top:580px;
   }
   a.l2{
     left:470px;
@@ -194,22 +194,22 @@ a.l3{
   }
   a.l3{
     left:590px;
-    top:175px;
+    top:145px;
   }
   }
 
 @media only screen and (max-width: 1024px){
 a.l1{
   left:450px;
-  top:600px;
+  top:580px;
 }
 a.l2{
   left:300px;
   
 }
 a.l3{
-  left:470px;
-  top:170px;
+  left:440px;
+  top:150px;
 }
 }
 @media only screen and (max-width: 812px){
@@ -219,26 +219,26 @@ a.l3{
   }
   a.l2{
     left: 200px;
-    top:460px;
+    top:430px;
   }
   a.l3{
     left: 300px;
-    top:180px;
+    top:150px;
   }
   }
 
 @media only screen and (max-width: 768px){
   a.l1{
     left: 300px;
-    top:580px;
+    top:550px;
   }
   a.l2{
     left: 180px;
-    top:440px;
+    top:410px;
   }
   a.l3{
     left: 300px;
-    top:180px;
+    top:150px;
   }
   }
   @media only screen and (max-width: 667px){
@@ -248,11 +248,11 @@ a.l3{
     }
     a.l2{
       left: 150px;
-      top:530px;
+      top:510px;
     }
     a.l3{
-      left: 300px;
-      top:300px;
+      left: 270px;
+      top:280px;
     }
     svg#map-w-legend{
       margin-top: 50px;
@@ -282,21 +282,21 @@ a.l3{
   @media only screen and (max-width: 414px){
     a.l1{
       left: 160px;
-      top:460px;
+      top:450px;
       width: 15px;
       height:15px;
       font-size: 5px;
     }
     a.l2{
       left: 100px;
-      top:380px;
+      top:370px;
       width: 15px;
       height: 15px;
       font-size: 5px;
     }
     a.l3{
       left: 170px;
-      top:240px;
+      top:230px;
       width: 15px;
       height: 15px;
       font-size: 5px;
@@ -313,21 +313,21 @@ a.l3{
   @media only screen and (max-width: 375px){
     a.l1{
       left: 150px;
-      top:440px;
+      top:430px;
       width: 15px;
       height:15px;
       font-size: 5px;
     }
     a.l2{
       left:90px;
-      top:370px;
+      top:355px;
       width: 15px;
       height: 15px;
       font-size: 5px;
     }
     a.l3{
       left: 145px;
-      top:240px;
+      top:230px;
       width: 15px;
       height: 15px;
       font-size: 5px;
@@ -340,9 +340,39 @@ a.l3{
       margin-top: 100px;
     }
     }
+    @media only screen and (max-width: 360px){
+      a.l1{
+        left: 150px;
+        top:420px;
+        width: 15px;
+        height:15px;
+        font-size: 5px;
+      }
+      a.l2{
+        left:85px;
+        top:350px;
+        width: 15px;
+        height: 15px;
+        font-size: 5px;
+      }
+      a.l3{
+        left: 145px;
+        top:220px;
+        width: 15px;
+        height: 15px;
+        font-size: 5px;
+      }
+      svg#map-w-legend{
+        margin-top: 50px;
+        
+      }
+      h1.title1{
+        margin-top: 100px;
+      }
+      }
     @media only screen and (max-width: 320px){
       a.l1{
-        left: 40px;
+        left: 140px;
         top:390px;
         width: 15px;
         height:15px;
@@ -703,7 +733,7 @@ body.admin{
   justify-content: center;
   background: url(/image/admin.jfif);
   background-repeat: no-repeat; 
-  background-size: 100% 100%;
+  background-size: 100 100;
    
 }
 .adcontainer{
@@ -714,9 +744,24 @@ body.admin{
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  color: aliceblue;
  font-size: 60px;
- 
 
 }
+#addlesson{
+  margin-top: 10%;
+}
+#adminlogin{
+  margin-top: 0%;
+}
+#choose1{
+  margin-top: 20%;
+}
+#choose2{
+  width: 120%;
+  
+}
+ 
+
+
 
 .adbtn{
   display: block;
@@ -755,10 +800,17 @@ body.admin{
     height: 60px;
     
   }
+  
+  #addlesson{
+    margin-top:50%;
+  }
+  
+ 
  
   }
 
 @media only screen and (max-width:812px){
+ 
   .adtitle{
     font-size: 45px;
    
@@ -768,8 +820,37 @@ body.admin{
     height: 60px;
     
   }
+  
+   #addlesson{
+    margin-top: 60%;
+  }
+  #adminlogin{
+    margin-top: 10%;
+  }
+  #choose1{
+    margin-top: 40%;
+  }
+  
+  
  
   }
+  @media only screen and (max-width:667px){
+    .adtitle{
+      font-size: 40px;
+     
+     }
+     .adbtn{
+      width: 200px;
+      height: 60px;
+      
+    }
+    #adminlogin{
+      margin-top: 0%;
+    }
+   
+   
+   
+    }
   @media only screen and (max-width:640px){
     .adtitle{
       font-size: 40px;
@@ -780,6 +861,15 @@ body.admin{
       height: 60px;
       
     }
+    
+    #addlesson{
+      margin-top: 100%;
+    }
+    #adminlogin{
+      margin-top: 20%;
+    }
+    
+   
    
     }
     @media only screen and (max-width: 568px){
@@ -791,8 +881,17 @@ body.admin{
       
        width: 200px;
        height: 50px;
-       
-     }
+      
+     
+    }
+    #addlesson{
+      margin-top: 120%;
+    }
+    #adminlogin{
+      margin-top: 30%;
+    }
+    
+   
      
       }
   @media only screen and (max-width: 414px){
@@ -800,6 +899,20 @@ body.admin{
       font-size: 30px;
       padding-top: 100px;
      }
+     .adbtn{
+      
+      width: 200px;
+      height: 65px;
+      
+    }
+    #addlesson{
+      margin-top: 120%;
+    }
+   
+    
+    
+    
+     
    
     }
 
@@ -808,6 +921,22 @@ body.admin{
     font-size: 30px;
     padding-top: 100px;
    }
+   .adbtn{
+      
+    width: 200px;
+    height: 60px;
+    
+  }
+  #addlesson{
+    margin-top: 140%;
+  }
+  
+  #choose2{
+    width: 180%;
+    
+  }
+  
+  
  
   }
 
@@ -816,6 +945,8 @@ body.admin{
       font-size: 25px;
      
     }
+    
+    
   }
 
   
@@ -824,6 +955,11 @@ body.admin{
       font-size: 20px;
       padding-top: 100px;
      }
+     #addlesson{
+      margin-top: 200%;
+    }
+   
+    
    
     }
 
@@ -997,7 +1133,7 @@ body.admin{
       overflow: hidden;
     }
     .signup-form h1{
-      margin-top: 100px;
+      margin-top: 100%;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color: #fff;
       font-size: 40px;
@@ -1019,7 +1155,7 @@ body.admin{
       border-radius: 6px;
     }
     .signup-btn{
-      margin-top: 60px;
+      margin-top: 5%;
       margin-bottom: 20px;
       background: #487eb0;
       color: #fff;
@@ -1080,6 +1216,9 @@ body.admin{
         background-image: url(/image/editpro.png);
         
       }
+      h5{
+        color: rgb(189, 189, 189);
+      }
       
       .box{
         width: 500px;
@@ -1134,17 +1273,7 @@ body.admin{
       .box input[type = "button"]:hover{
         background: #652ecc;
       }
-      button.editbut{
-        margin: 20px auto;
-        background: none;
-        display: block;
-        border: 2px solid #da9123;
-       color: white;
-       border-radius: 24px;
-       transition: 0.25s;
-       
-       padding: 14px 40px;
-      }
+     
       
       button.editbut2{
         border:0;
@@ -1161,9 +1290,9 @@ body.admin{
         cursor: pointer;
         z-index: 0px;
         position: absolute;
-        width: 20%;
-        top: 530px;
-        left: 650px;
+        width: 15%;
+        top: 78%;
+        left: 43%;
         margin-top: 20px;
       }
       button.editbut:hover{
@@ -1284,74 +1413,115 @@ button {
   
   button.editbut2{
     
-    top: 660px;
-    left: 550px;
+    top: 71%;
+    left: 43%;
+    
     
   }
 }
 @media screen and (max-width: 1024px) {
   button.editbut2{
     
-    top: 835px;
-    left: 410px;
-    
+    top: 65%;
+    left: 40%;
+    width: 20%;
   }
  
 }
 @media screen and (max-width: 812px) {
   button.editbut2{
     
-    top: 645px;
-    left: 270px;
-   padding: 15px 0px;
-   width: 35%;
+    top: 100%;
+    left: 35%;
+    width: 30%;
   }
-  .box{
-    top: 500px;
-  }
+ 
+  
   
 }
 
 @media screen and (max-width: 768px) {
   button.editbut2{
     
-    top: 645px;
-    left: 250px;
-   
+    top: 70%;
+    left: 36%;
+    width: 30%;
   }
+  
+}
+@media screen and (max-width: 414px) {
+  button.editbut2{
+    
+    top: 92%;
+    left: 25%;
+    width: 50%;
+  }
+  .box{
+    margin-top:25% ;
+  }
+    
+  
+  
+}
+@media screen and (max-width: 411px) {
+  button.editbut2{
+    
+    top: 90%;
+    left: 25%;
+    width: 50%;
+  }
+  .box{
+    margin-top:25% ;
+  }
+    
+  
   
 }
 @media screen and (max-width: 375px) {
   button.editbut2{
     
-    top: 645px;
-    left: 80px;
-   width: 60%;
+    top: 90%;
+    left: 20%;
+    width: 60%;
+    
   }
   .box{
-    top: 500px;
-    width: 400px;
-    background:none;
+    margin-top:30% ;
   }
+    
+  
   
 }
-
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 360px) {
   button.editbut2{
     
-    top: 645px;
-    left: 80px;
-   width: 60%;
+    top: 100%;
+    left: 20%;
+    width: 60%;
+    
   }
   .box{
-    top: 500px;
-    width: 400px;
-    background:none;
+    margin-top:30% ;
   }
+    
+  
   
 }
-
-
+@media screen and (max-width: 320px) {
+  button.editbut2{
+    
+    top: 115%;
+    left: 16%;
+    width: 70%;
+    
+  }
+  .box{
+    margin-top:55% ;
+  }
+    
+  
+  
+}
 
 
 
@@ -1426,8 +1596,8 @@ button {
         font-size: 80px; 
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
         color: white; 
-        padding-left: 80px;
-        padding-top: 50px;
+        padding-left: 5%;
+        padding-top: 8%;
       }
       .des{
         color: white;
@@ -1440,7 +1610,20 @@ button {
         padding-top: 50px;
         padding-left: 20px;
       }
-
+      @media only screen and (max-width: 1024px){
+        .tte{
+          padding-left: 10%;
+          padding-top: 15%;
+        }
+        
+          }
+        @media only screen and (max-width: 375px){
+          .tte{
+            padding-left: 10%;
+            padding-top: 30%;
+          }
+  
+      }
       
 
 
@@ -1454,7 +1637,8 @@ button {
         left: -105%;
         width: 100%;
         height: 100vh;
-        background-image: url(/image/login.png);
+        background-color: rgb(255, 255, 255); 
+        background-image: linear-gradient(to bottom right, rgb(139, 194, 245), rgb(48, 93, 145)); 
         background-repeat: no-repeat;
         background-size: 100% 100%;
         transition: 1s;
@@ -1464,7 +1648,7 @@ button {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        color: white;
+        color: rgb(14, 13, 13);
         text-align: center;
       }
       .login-form h1{
@@ -1475,10 +1659,10 @@ button {
         display: block;
         box-sizing: border-box;
         width: 240px;
-        background: #ffffff28;
-        border: 1px solid white;
+        background: #00000062;
+        border: 1px solid rgb(10, 10, 10);
         padding: 10px 20px;
-        color: white;
+        color: rgb(3, 3, 3);
         outline: none;
         margin: 10px 0;
         border-radius: 6px;
@@ -1488,13 +1672,13 @@ button {
         width: 240px;
         background: #2c3e50;
         border: 0;
-        color: white;
+        color: rgb(7, 7, 7);
         padding: 10px;
         border-radius: 6px;
         cursor: pointer;
       }
       .hide-login-btn{
-        color: #000;
+        color: rgb(8, 8, 8);
         position: absolute;
         top: 40px;
         right: 40px;

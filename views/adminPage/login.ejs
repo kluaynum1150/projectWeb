@@ -23,7 +23,7 @@
       </script>
     
     <div class="w3-display-topmiddle adtitle" >LOG IN TO ADMIN</div>
-    <form style="width: 40%;" action = '/admin/login' method = 'POST'>
+    <form id="adminlogin" style="width: 40%;" action = '/admin/login' method = 'POST'>
         <div class="form-group">
           <label for="userName">USERNAME</label>
           <input type="text" class="form-control" name="username">
@@ -44,6 +44,6 @@
             </div>
           <% } %>
         </div>
-        <center><button style="background: #a48ed2;border-color: white;" type="submit" class="btn btn-primary">LOGIN</button></center>
+        <center><button style="background: #192649;border-color: white;" type="submit" class="btn btn-primary">LOGIN</button></center>
     </form>
 <%- include("../partials/footer") %>

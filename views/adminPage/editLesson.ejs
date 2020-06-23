@@ -23,7 +23,7 @@
       </script>
     
     <div class="w3-display-topmiddle adtitle" >EDIT LESSON</div>
-        <form style="width: 50%;" action="/admin/editLesson/<%= info_Lesson._id%>?_method=PUT" method="POST">
+        <form  style="width: 50%;" action="/admin/editLesson/<%= info_Lesson._id%>?_method=PUT" method="POST">
             <div class="form-group">
                 <label for="nameLesson">Name of lesson</label>
                 <input type="text" class="form-control" name="nameLesson" value="<%= info_Lesson.name%>" required>
@@ -40,8 +40,8 @@
             </div>
             
             <div align="center">
-                <button style="background: #a48ed2;border-color: white;" type="submit" class="btn btn-primary">SUBMIT</button>
-                <a href="/admin/editOrDeleteLesson" class="btn btn-primary" style="background: #a48ed2;border-color: white;">CANCEL</a>
+                <button style="background: #192649;border-color: white;" type="submit" class="btn btn-primary">SUBMIT</button>
+                <a href="/admin/editOrDeleteLesson" class="btn btn-primary" style="background: #192649;border-color: white;">CANCEL</a>
             </div>
         </form>
     <script>

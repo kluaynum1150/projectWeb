@@ -23,12 +23,13 @@
       </script>
     
     <div class="w3-display-topmiddle adtitle" >Create new lesson</div>
-        <form style="width: 50%;" action="/admin/addLesson" method="POST">
+    
+        <form id="addlesson" style="width: 50%;" action="/admin/addLesson" method="POST">
             <div class="form-group">
                 <label for="nameLesson">Name of lesson</label>
                 <input type="text" class="form-control" name="nameLesson" required>
             </div>
-            <div class="form-group">
+            <div class="form-group ">
                 <label for="level">Level of lesson</label>
                 <select class="custom-select" name="level" required>
                   <option value="">Choose...</option>
@@ -43,8 +44,8 @@
             </div>
             
             <div align="center">
-                <button style="background: #a48ed2;border-color: white;" type="submit" class="btn btn-primary">NEXT</button>
-                <a href="/admin" class="btn btn-primary" style="background: #a48ed2;border-color: white;">CANCEL</a>
+                <button style="background: #192649;border-color: white;" type="submit" class="btn btn-primary">NEXT</button>
+                <a href="/admin" class="btn btn-primary" style="background: #192649;border-color: white;">CANCEL</a>
             </div>
         </form>
     <script>
