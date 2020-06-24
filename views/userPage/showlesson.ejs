@@ -1,0 +1,52 @@
+<%- include("../partials/header") %>
+  <body class="study">
+    <p>
+    <div class="w3-display-topleft">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-angle-double-down"></i>
+          <div class="sm-menu">
+            <a href="/TTE/profile"><i class="fas fa-user-edit"></i></a>
+            <a href="/TTE/showLesson"><i class="fas fa-map-marked-alt"></i></a>
+            <a href="/explore"><i class="fas fa-book"></i></i></a>
+            <a href="/aboutus"><i class="fas fa-address-book"></i></a>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      <a style="padding-left: 60%;" href="/TTE/showLesson">
+        <img id="logo" src="/image/logo.png"  width="100" height="100">
+      </a> 
+    </div>
+    </p>
+      <script>
+        $(".show-btn").click(function(){
+          $(".sm-menu").fadeToggle("fast");
+        });
+      </script>
+    
+    <div class='w3-display-topmiddle container' style="text-align: center;">
+        <% if (error && error.length > 0) { %>
+          <div class="alert alert-danger" role="alert">
+            <%= error %>
+          </div>
+        <% } %>
+        <% if (success && success.length > 0) { %>
+          <div class="alert alert-success" role="alert">
+            <%= success %>
+          </div>
+        <% } %>
+    </div>
+
+    <div class="w3-row w3-padding-64 w3-container w3-jumbotron">
+        <h1><%= info_lesson.name%></h1>
+        <div id="show" class="jumbotron">
+          <%- info_lesson.information%>
+        </div>
+        <div align="right">
+          <a href="/TTE/showLesson/<%= info_lesson._id%>/examTest" class="btn btn-primary" style="background: #a48ed2;border-color: white;">Do exam</a>
+      </div>
+    </div>
+
+<%- include("../partials/footer") %>

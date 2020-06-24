@@ -1,0 +1,73 @@
+<%- include("../partials/header") %>
+<body class="study">
+    <p>
+    <div class="w3-display-topleft">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-angle-double-down"></i>
+          <div class="sm-menu">
+            <a href="/TTE/profile"><i class="fas fa-user-edit"></i></a>
+            <a href="/TTE/showLesson"><i class="fas fa-map-marked-alt"></i></a>
+            <a href="/explore"><i class="fas fa-book"></i></i></a>
+            <a href="/aboutus"><i class="fas fa-address-book"></i></a>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      <a style="padding-left: 60%;" href="/TTE/showLesson">
+        <img id="logo" src="/image/logo.png"  width="100" height="100">
+      </a> 
+    </div>
+    </p>
+      <script>
+        $(".show-btn").click(function(){
+          $(".sm-menu").fadeToggle("fast");
+        });
+      </script>
+    
+    <div class='w3-display-topmiddle container' style="text-align: center; width: 60%;">
+        <% if (error && error.length > 0) { %>
+          <div class="alert alert-danger" role="alert">
+            <%= error %>
+          </div>
+        <% } %>
+        <% if (success && success.length > 0) { %>
+          <div class="alert alert-success" role="alert">
+            <%= success %>
+          </div>
+        <% } %>
+    </div>
+
+    <div class="w3-row w3-padding-64 w3-container w3-jumbotron" style="align-items: center;">
+        <h1>Exam Test</h1><hr>
+        
+        <form name="<%= exam[0].idMap%>" style="width: 50%;" action="/TTE/showLesson/<%= exam[0].idMap%>/examTest" method="POST">
+            <% for(var i = 0; i<exam.length;i++){ %>
+                <input type="text" name="idQues<%=i+1%>" hidden value="<%= exam[i]._id%>">
+                <label class="textColur" for="idQues<%=i+1%>"><%= i+1%>. <%= exam[i].quesion%></label><br>
+                <% for(var j = 0;j<4;j++){ %>
+                    <input type="radio" name="aq<%= i+1%>" value="a<%=j+1%>">
+                        <% if(j == 0){ %>
+                            <%= exam[i].choice.one%>
+                        <% } %>
+                        <% if(j == 1){ %>
+                            <%= exam[i].choice.two%>
+                        <% } %>
+                        <% if(j == 2){ %>
+                            <%= exam[i].choice.three%>
+                        <% } %>
+                        <% if(j == 3){ %>
+                            <%= exam[i].choice.four%>
+                        <% } %>
+                        <br>
+                <% } %>
+                <hr>
+            <% } %>   
+            <div align="center">
+                <button style="background: #a48ed2;border-color: white;" type="submit" class="btn btn-primary">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+<%- include("../partials/footer") %>

@@ -51,33 +51,32 @@ router.get("/showLesson/:lesson_id/examTest", middleware.isLoggedIn, function(re
 });
 
 //ตรวจข้อสอบ
-// router.post("/showLesson/:lesson_id/examTest", middleware.isLoggedIn,async function(req,res){
-//     var ans = req.body;
-//     let score_s = 0;
-//     console.log(ans);
-//     for(i = 1;i<=3;i++){
-//         let anser_query = ans['aq'+i];
-//         let correct_ans = null;
-//         correct_ans = await ques.findById(ans['idQues'+i])
-//         if(correct_ans.answer == anser_query){
-//             score_s = score_s + 1;
-//         }
-//     }
-//     user.findById(req.user.id, function(err,foundUser){
-//         if(err){
-//             console.log(err);
-//         } else{
-//             let info = {lessonId: req.params.lesson_id,score: score_s};
-//             foundUser.exp.push(info);
-//             foundUser.save();
-//             if(score_s < 2){
-//                 req.flash("error","You take correct "+ score_s +" questions.");
-//             } else{
-//                 req.flash("success","You take correct "+ score_s +" questions.");
-//             }
-//             res.redirect("/TTE/showLesson/"+req.params.lesson_id);
-//         }
-//     });
-// });
+router.post("/showLesson/:lesson_id/examTest", middleware.isLoggedIn,async function(req,res){
+    var ans = req.body;
+    let score_s = 0;
+    for(i = 1;i<=5;i++){
+        let anser_query = ans['aq'+i];
+        let correct_ans = null;
+        correct_ans = await ques.findById(ans['idQues'+i])
+        if(correct_ans.answer == anser_query){
+            score_s = score_s + 1;
+        }
+    }
+    user.findById(req.user.id, function(err,foundUser){
+        if(err){
+            console.log(err);
+        } else{
+            let info = {lessonId: req.params.lesson_id,score: score_s};
+            foundUser.exp.push(info);
+            foundUser.save();
+            if(score_s < 3){
+                req.flash("error","You take correct "+ score_s +" questions.");
+            } else{
+                req.flash("success","You take correct "+ score_s +" questions.");
+            }
+            res.redirect("/TTE/showLesson/"+req.params.lesson_id);
+        }
+    });
+});
 
 module.exports = router;
