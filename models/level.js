@@ -5,7 +5,7 @@ const levelSchema = new mongoose.Schema({
     maps: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "map"
+            ref: "lesson"
         }
     ]
 });
