@@ -22,10 +22,10 @@
     });
 </script>
 
-<div class="w3-display-topmiddle adtitle" >EDIT AND DELETE LESSON</div>
+<div class="w3-display-topmiddle adtitle" >ADD NEW QUESTION</div>
 
-<div class="adcontainer">
-    <div id="choose1" class="container" style="text-align: center; width: 100%; ">
+<div >
+    <div id="choose1" class="w3-container" style="text-align: center; width: 100%; ">
         <% if (error && error.length > 0) { %>
           <div class="alert alert-danger" role="alert">
             <%= error %>
@@ -37,7 +37,7 @@
           </div>
         <% } %>
     </div>
-    <div id="choose2" class="jumbotron">
+    <div id="choose2" class="w3-jumbotron"  >
     <% allLesson.forEach(function(allLesson){ %>
         <div  class="container" style="width: 200%;">
             <h4 style="display: inline;"><%= allLesson.level %> : <%= allLesson.name %></h4>

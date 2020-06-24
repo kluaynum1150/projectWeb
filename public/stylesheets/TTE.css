@@ -736,9 +736,7 @@ body.admin{
   background-size: 100 100;
    
 }
-.adcontainer{
-  perspective: 350px;
-}
+
 
 .adtitle{
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -1970,7 +1968,198 @@ button {
       }
       /*.................................................add Question zone..............................................................*/
       
+      #addq{
+       margin-top: 50%;
+      }
+      @media only screen and (max-width: 823px){
+        #addq{
+          margin-top: 100%;
+         }
+    }
+      @media only screen and (max-width: 812px){
+        #addq{
+          margin-top: 80%;
+         }
+    }
+    @media only screen and (max-width: 736px){
+      #addq{
+        margin-top: 110%;
+       }
+  }
+  @media only screen and (max-width: 667px){
+    #addq{
+      margin-top: 130%;
+     }
+}
 
+
+
+#addnq{
+  margin-top: 30%;
+  margin-left: 30%;
+}
+@media only screen and (max-width: 823px){
+  #addnq{
+    margin-top: 60%;
+    
+  }
+}
+@media only screen and (max-width: 812px){
+  #addnq{
+    margin-top: 60%;
+    
+  }
+}
+@media only screen and (max-width: 736px){
+  #addnq{
+    margin-top: 100%;
+    
+  }
+}
+@media only screen and (max-width: 667px){
+  #addnq{
+    margin-top: 80%;
+    
+  }
+}
+@media only screen and (max-width: 414px){
+  #addnq{
+    margin-top: 100%;
+    
+  }
+}
+@media only screen and (max-width: 375px){
+  #addnq{
+    margin-top: 100%;
+    
+  }
+}
+@media only screen and (max-width: 320px){
+  #addnq{
+    margin-top: 120%;
+    
+  }
+}
+#eq{
+  margin-top: 50%;
+  
+}
+ .beq{
+   margin-left: -50%;
+ 
+}
+#ok{
+  margin-top: -1000%;
+  margin-left: -3500%;
+}
+@media only screen and (max-width: 1024px){
+  .beq{
+    margin-top: -0%;
+  
+ }
+ #ok{
+   margin-top: -700%;
+ 
+ }  
+ #eq{
+  margin-top: 100%;
+  
+}
+}
+@media only screen and (max-width: 812px){
+  .beq{
+    margin-top: 500%;
+    
+  
+ }
+ #ok{
+   margin-top: -50%;
+ 
+ }  
+ #eq{
+  margin-top: 150%;
+  
+  
+}
+}
+@media only screen and (max-width: 667px){
+  .beq{
+    margin-top: 500%;
+  
+ }
+ #ok{
+   margin-top: -50%;
+ 
+ }  
+ #eq{
+  margin-top: 200%;
+  
+}
+}
+@media only screen and (max-width: 414px){
+  .beq{
+    margin-top: 500%;
+  
+ }
+ #ok{
+   margin-top: -50%;
+ 
+ }  
+ #eq{
+  margin-top: 300%;
+  
+}
+}
+@media only screen and (max-width: 375px){
+  .beq{
+    margin-top: 500%;
+  
+ }
+ #ok{
+   margin-top: -50%;
+ 
+ }  
+ #eq{
+  margin-top: 350%;
+  
+}
+}
+#ine{
+  margin-top: 30%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+@media only screen and (max-width: 823px){
+  #ine{
+    margin-top: 150%;
+    
+
+}
+@media only screen and (max-width: 812px){
+  #ine{
+    margin-top: 100%;
+    
+
+}
+@media only screen and (max-width: 568px){
+  #ine{
+    margin-top: 120%;
+    
+
+}
+
+@media only screen and (max-width: 375px){
+  #ine{
+    margin-top: 120%;
+    
+
+}
+@media only screen and (max-width: 320px){
+  #ine{
+    margin-top: 150%;
+    
+
+}
 
 
 

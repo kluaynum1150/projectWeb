@@ -22,10 +22,10 @@
         });
       </script>
     
-    <div class="w3-display-topmiddle adtitle" >Add new quesions</div>
+    <div  class="w3-display-topmiddle adtitle" >Add new quesions</div>
     <hr>
-    <div class='container'>
-        <form style="width: 50%;" action="/admin/addNewQuesion/<%= Lesson_id%>" method="POST">
+    <div  class='container'>
+        <form id="addnq" style="width: 50%;" action="/admin/addNewQuesion/<%= Lesson_id%>" method="POST">
             <div class="form-group">
                 <label style="display: inline;" for="Quesion">Quesion</label>
                 <textarea style="width: 50%;" class="form-control" name="Quesion" rows="1" cols="100" required></textarea>
@@ -52,8 +52,8 @@
                 <input style="display: inline;" class="form-control" type="radio" name="a" value="a4">
             </div>
             <div align="center">
-                <button style="background: #a48ed2;border-color: white; display: inline;" type="submit" class="btn btn-warning">ADD</button>
-                <a href="/admin/addNewQuesion" class="btn btn-primary" style="display: inline; background: #a48ed2;border-color: white;">CANCEL</a>
+                <button style="background: #192649;border-color: white; color: white; display: inline;" type="submit" class="btn btn-warning">ADD</button>
+                <a href="/admin/addNewQuesion" class="btn btn-primary" style="display: inline; background: #192649;border-color: white;">CANCEL</a>
             </div>
         </form>
         <hr>
