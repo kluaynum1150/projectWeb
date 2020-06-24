@@ -7,11 +7,32 @@ const express = require('express'),
       middleware = require("../middleware");
 
 router.get("/showLesson", middleware.isLoggedIn, function(req, res){
-    res.render("userPage/index");
+    lesson.find({level: req.user.status}, function(err,foundLesson){
+        if(err){
+            console.log(err);
+        } else{
+            levels.find({}, function(err,foundLevel){
+                if(err){
+                    console.log(err);
+                } else{
+                    if(req.user.status == foundLevel[0].nameLevel){
+                        res.render("userPage/index",{allLesson:foundLesson});
+                    }
+                    if(req.user.status == foundLevel[1].nameLevel){
+                        res.render("userPage/index2",{allLesson:foundLesson});
+                    }
+                    if(req.user.status == foundLevel[2].nameLevel){
+                        res.render("userPage/index3");
+                    }
+                }
+            });
+            
+        }
+    });
 });
 
 //ไปหน้าบทเรียน
-router.get("/showLesson/:lesson_id", middleware.isLoggedIn, function(req,res){
+router.get("/showLesson/:lesson_id", middleware.isLoggedIn, middleware.upLevel, function(req,res){
     lesson.findById(req.params.lesson_id, function(err,found){
         if(err){
             console.log(err);
