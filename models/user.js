@@ -9,7 +9,12 @@ let UserSchema = new mongoose.Schema({
     tag: String,
     status: String,
     imgProfile: String,
-    exp: String,
+    exp: [
+        {
+            lessonId: String,
+            score: String
+        }
+    ]
 });
 
 UserSchema.plugin(passportLocalMongoose);

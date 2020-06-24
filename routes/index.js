@@ -13,7 +13,7 @@ router.post('/', passport.authenticate('local',{
     failureRedirect: '/'
 }),function(req, res){
     if(req.user.tag == "user"){
-        res.redirect("/TTE");
+        res.redirect("/TTE/showLesson");
     } else {
         req.logOut();
         req.flash('error','Incorrect username or password. Try again.');
@@ -48,7 +48,7 @@ router.post('/signup', function(req,res){
             res.redirect("/signup");
         }
         passport.authenticate('local')(req,res,function(){
-            res.redirect('/TTE');
+            res.redirect('/TTE/showLesson');
         });
     });
     } else {

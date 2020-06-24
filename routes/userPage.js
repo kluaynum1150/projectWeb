@@ -1,24 +1,81 @@
 const express = require('express'),
       router = express.Router(),
-      passport = require('passport'),
-      multer = require("multer"),
-      path = require("path"),
-      fs = require("fs"),
+      lesson = require("../models/lesson"),
+      ques = require("../models/quesion"),
+      levels = require("../models/level"),
       user = require("../models/user"),
       middleware = require("../middleware");
 
-router.get("/", middleware.isLoggedIn, function(req, res){
+router.get("/showLesson", middleware.isLoggedIn, function(req, res){
     res.render("userPage/index");
 });
 
 //ไปหน้าบทเรียน
-// router.get("/:lesson_id", middleware.isLoggedIn, function(req,res){
-//     map.findById(req.params.lesson_id, function(err,found){
+router.get("/showLesson/:lesson_id", middleware.isLoggedIn, function(req,res){
+    lesson.findById(req.params.lesson_id, function(err,found){
+        if(err){
+            console.log(err);
+            res.redirect("/TTE/showLesson");
+        } else{
+            res.render("userPage/showlesson",{info_lesson:found});
+        }
+    });
+});
+
+//ไปหน้าข้อสอบ
+router.get("/showLesson/:lesson_id/examTest", middleware.isLoggedIn, function(req,res){
+    ques.find({idMap: req.params.lesson_id}, function(err,allQues){
+        if(err){
+            console.log(err);
+            res.redirect("/TTE/showLesson");
+        } else{
+            var examTest = [];
+            var n = allQues.length;
+            var num = 5;
+            var index = 0;
+            var random = 0;
+            var examFound,indexFind;
+            while(num>0){
+                random = Math.floor(Math.random() * n) + 1;
+                examFound = allQues.find(function(value, index, array){ return value.value == random });
+                indexFind = examTest.findIndex(function(value, index, array){ return value._id == examFound._id });
+                if(indexFind == -1 && index !== num){
+                    examTest.push(examFound);
+                    index++;
+                    num--;
+                }
+            }
+            res.render("userPage/examTest",{exam:examTest});
+        }
+    });
+});
+
+//ตรวจข้อสอบ
+// router.post("/showLesson/:lesson_id/examTest", middleware.isLoggedIn,async function(req,res){
+//     var ans = req.body;
+//     let score_s = 0;
+//     console.log(ans);
+//     for(i = 1;i<=3;i++){
+//         let anser_query = ans['aq'+i];
+//         let correct_ans = null;
+//         correct_ans = await ques.findById(ans['idQues'+i])
+//         if(correct_ans.answer == anser_query){
+//             score_s = score_s + 1;
+//         }
+//     }
+//     user.findById(req.user.id, function(err,foundUser){
 //         if(err){
 //             console.log(err);
-//             res.redirect("/TTE");
 //         } else{
-//             res.render("userPage/showMap",{info_lesson:found});
+//             let info = {lessonId: req.params.lesson_id,score: score_s};
+//             foundUser.exp.push(info);
+//             foundUser.save();
+//             if(score_s < 2){
+//                 req.flash("error","You take correct "+ score_s +" questions.");
+//             } else{
+//                 req.flash("success","You take correct "+ score_s +" questions.");
+//             }
+//             res.redirect("/TTE/showLesson/"+req.params.lesson_id);
 //         }
 //     });
 // });
