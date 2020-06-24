@@ -40,9 +40,9 @@
     </div>
 
     <div class="w3-row w3-padding-64 w3-container w3-jumbotron" style="align-items: center;">
-        <h1>Exam Test</h1><hr>
+        <h1 style="margin-left: 5%; margin-top: 5%;">Exam Test</h1><hr>
         
-        <form name="<%= exam[0].idMap%>" style="width: 50%;" action="/TTE/showLesson/<%= exam[0].idMap%>/examTest" method="POST">
+        <form name="<%= exam[0].idMap%>" style="width: 100%; margin-left: 5%;" action="/TTE/showLesson/<%= exam[0].idMap%>/examTest" method="POST">
             <% for(var i = 0; i<exam.length;i++){ %>
                 <input type="text" name="idQues<%=i+1%>" hidden value="<%= exam[i]._id%>">
                 <label class="textColur" for="idQues<%=i+1%>"><%= i+1%>. <%= exam[i].quesion%></label><br>
