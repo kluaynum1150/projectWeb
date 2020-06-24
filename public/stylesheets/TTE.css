@@ -1430,6 +1430,16 @@ button {
 }
 
 /* responsive editpro*/
+@media screen and (max-width: 1600px) {
+  
+  button.editbut2{
+    
+    top: 58%;
+    left: 43%;
+    
+    
+  }
+}
 @media screen and (max-width: 1366px) {
   
   button.editbut2{
