@@ -22,7 +22,7 @@ router.get("/showLesson", middleware.isLoggedIn, function(req, res){
                         res.render("userPage/index2",{allLesson:foundLesson});
                     }
                     if(req.user.status == foundLevel[2].nameLevel){
-                        res.render("userPage/index3");
+                        res.render("userPage/index3",{allLesson:foundLesson});
                     }
                 }
             });
