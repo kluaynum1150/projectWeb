@@ -25,14 +25,14 @@
     <div class="w3-display-topmiddle adtitle" >Edit and delete quesions</div>
     <% allQues.forEach(function(allQues){ %>
         
-        <form id="eq" style="width: 50%;" action="/admin/editLesson/<%= lesson_id%>/editOrDeleteQuesions/<%= allQues._id%>?_method=PUT" method="POST">
-            <div class="form-group">
-                <label style="display: inline;" for="Quesion">Quesion</label>
+        <form id="eq" style="width: 50%; margin-left: 3%;" action="/admin/editLesson/<%= lesson_id%>/editOrDeleteQuesions/<%= allQues._id%>?_method=PUT" method="POST">
+            <div class="form-group" >
+                <label style="display: inline;"  for="Quesion">Quesion</label>
                 <textarea style="width: 200%;" class="form-control" name="Quesion" rows="5" cols="80" required><%= allQues.quesion%></textarea>
             </div>
             
             <div class="form-grop">
-                <label style="display: inline;" for="c1">choice 1</label>
+                <label style="display: inline; " for="c1">choice 1</label>
                 <input style="display: inline;" class="form-control" type="text" name="c1" value="<%= allQues.choice.one%>" required>
                 <% if(allQues.answer == 'a1'){ %>
                     <input style="display: inline;" class="form-control" type="radio" name="a" value="a1" checked>

@@ -2064,6 +2064,7 @@ button {
  #eq{
   margin-top: 100%;
   
+  
 }
 }
 @media only screen and (max-width: 812px){
@@ -2080,8 +2081,10 @@ button {
   margin-top: 150%;
   
   
+  
 }
 }
+
 @media only screen and (max-width: 667px){
   .beq{
     margin-top: 500%;
@@ -2117,6 +2120,7 @@ button {
  }
  #ok{
    margin-top: -50%;
+   margin-left:-1500%;
  
  }  
  #eq{
