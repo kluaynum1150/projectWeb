@@ -15,14 +15,7 @@
         <img id="logo" src="/image/logo.png"  width="100" height="100">
     </a> 
 </div>
-
-<script>
-$(".show-btn").click(function(){
-    $(".sm-menu").fadeToggle("fast");
-});
-</script>
-  
-  <div class="w3-jumbotron w3-container ">
+<div class="w3-display-topmiddle">
     <div class='container' style="text-align: center;">
         <% if (error && error.length > 0) { %>
             <div class="alert alert-danger" role="alert">
@@ -35,11 +28,20 @@ $(".show-btn").click(function(){
             </div>
         <% } %>
     </div>
-    <div id="ine">
-    <form>
+</div>
+
+<script>
+$(".show-btn").click(function(){
+    $(".sm-menu").fadeToggle("fast");
+});
+</script>
+  
+  <div class="w3-jumbotron w3-container" style="height: 70%;width: 70%;">
+    <div>
+    <form id="inputNum">
         <div class="form-group">
             <label  for="numExam">Input number of exam</label>
-            <input type="text" id="i" class="form-control" name="numExam" value="1"  readonly>
+            <input type="text" id="i" class="form-control" name="numExam" value="1"  >
         </div>
         <input type="button" id="b" value="show" onclick="getForm(numExam.value)" style="background: #a48ed2;border-color: white;" class="btn btn-primary">
     </form>
@@ -47,9 +49,12 @@ $(".show-btn").click(function(){
     <div  id="test2">
         
     </div>
-    <form  id="test" style="width: 100%;" action="/admin/<%= info_id%>/addQuesions" method="POST">
+    <div class="addQues">
+        <form style="width: 95%;margin: 5px;" id="test" action="/admin/<%= info_id%>/addQuesions" method="POST">
         
-    </form>
+        </form>
+    </div>
+    
   </div>  
 </div>
 
@@ -70,11 +75,11 @@ $(".show-btn").click(function(){
             // text += '</tr><tr>';
             text += '<p>เลือกคำตอบที่ถูกต้อง</p>';
             for(var j = 1;j<=4;j++){
-                // text += '<div class="form-group>';
                 text += '<p style="display: inline;">Choice'+ j +'</p>';
-                text += '<input style="display: inline;" class="form-control" type="text" size="50" name="q'+i+'c'+ j +'" required>';
-                text += '<input style="display: inline;" class="form-control" type="radio" size="50" name="aq'+ i +'" value="a'+ j +'">';
-                // text += '</div>';
+                text += '<div class="row">';
+                text += '<div class="col-25"><input style="display: inline;" class="form-control" type="radio" size="50" name="aq'+ i +'" value="a'+ j +'"></div>';
+                text += '<div class="col-75"><input style="display: inline;" class="form-control" type="text" size="50" name="q'+i+'c'+ j +'" required></div>';
+                text += '</div>';
             };
             text += '</div>';
             text += '<hr>';

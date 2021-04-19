@@ -11,14 +11,22 @@ const express = require("express"),
       indexRoutes = require('./routes/index'),
       tteRoutes = require('./routes/userPage'),
       tteProflieRoutes = require('./routes/userPofile'),
-      adminRoutes = require('./routes/adminPage');
+      adminRoutes = require('./routes/adminPage'),
+      config = require("./config/db");
 
 const app = express();
 
 mongoose.set("useUnifiedTopology",true);
-mongoose.connect('mongodb://localhost:27017/tteDatabase2', {useNewUrlParser: true});
 mongoose.set("useCreateIndex",true);
 mongoose.set("useFindAndModify",false);
+mongoose
+    .connect(config.database, {useNewUrlParser: true})
+    .then(() => {
+        console.log("Database is connected");
+    })
+    .catch(err => {
+        console.log({ database_error: err });
+    });
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -32,13 +40,13 @@ app.use(require("express-session")({
 })
 );
 
-//เพิ่มรหัสของ admin
+// เพิ่มรหัสของ admin
 // user.register(new user({username: "admin", firstname: "admin", lastname: "admin", tag: "admin"}), "admin", function(err, user){
- //    if(err){
+//     if(err){
 //         console.log(err);
- //    }
+//     }
 // });
-//เพิ่มเลเวล
+// เพิ่มเลเวล
 // levels.create({nameLevel: "beginner1"}, function(err){
 //     if(err){
 //         console.log(err);

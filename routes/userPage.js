@@ -87,9 +87,20 @@ router.post("/showLesson/:lesson_id/examTest", middleware.isLoggedIn,async funct
         if(err){
             console.log(err);
         } else{
-            let info = {lessonId: req.params.lesson_id,score: score_s};
-            foundUser.exp.push(info);
-            foundUser.save();
+            let info;
+            let pos = foundUser.exp.findIndex(exp => exp.lessonId == req.params.lesson_id);
+            if(pos >= 0){
+                if(foundUser.exp[pos].score < score_s){
+                    foundUser.exp.splice(pos, 1)
+                    info = {lessonId: req.params.lesson_id,score: score_s};
+                    foundUser.exp.push(info);
+                    foundUser.save();
+                }
+            } else{
+                info = {lessonId: req.params.lesson_id,score: score_s};
+                foundUser.exp.push(info);
+                foundUser.save();
+            }
             if(score_s < 3){
                 req.flash("error","You take correct "+ score_s +" questions.");
             } else{

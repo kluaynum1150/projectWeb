@@ -1,5 +1,6 @@
 const   user = require("../models/user"),
-        levels = require("../models/level");
+        levels = require("../models/level"),
+        alert = require('alert');
 
 let middlewareObj = {};
 
@@ -22,16 +23,16 @@ middlewareObj.isLoggedInAdmin = function(req, res, next){
 }
 
 middlewareObj.upLevel = function(req, res, next){
+    let infoUser = req.user;
+    let num = 0;
+    let i = 0;
+    let emp,index;
+    let numOfexp;
+    let mapLevel;
     levels.find({}, function(err,found){
         if(err){
             console.log(err);
         } else{
-            let infoUser = req.user;
-            let num = 0;
-            let i = 0;
-            let emp,index;
-            let numOfexp;
-            let mapLevel;
             if(req.user.status == found[0].nameLevel){ 
                 numOfexp = req.user.exp.length;
                 mapLevel = found[0].maps;
@@ -47,7 +48,9 @@ middlewareObj.upLevel = function(req, res, next){
                                 } else{
                                     foundUser.status = found[1].nameLevel;
                                     foundUser.save();
+                                    req.flash('success', 'ยินดีด้วย!! คุณเลเวลอัพแล้ว');
                                     res.redirect("/TTE/showLesson");
+                                    alert('ยินดีด้วย!! คุณเลเวลอัพแล้ว');
                                 }
                             });
                         }
@@ -74,7 +77,9 @@ middlewareObj.upLevel = function(req, res, next){
                                 } else{
                                     foundUser.status = found[2].nameLevel;
                                     foundUser.save();
+                                    req.flash('success', 'ยินดีด้วย!! คุณเลเวลอัพแล้ว');
                                     res.redirect("/TTE/showLesson");
+                                    alert('ยินดีด้วย!! คุณเลเวลอัพแล้ว');
                                 }
                             });
                         }
@@ -101,6 +106,7 @@ middlewareObj.upLevel = function(req, res, next){
                                 } else{
                                     req.flash('success', 'คุณเลเวลสูงสุดแล้ว');
                                     res.redirect("/TTE/showLesson");
+                                    alert('คุณเลเวลสูงสุดแล้ว');
                                 }
                             });
                         }
